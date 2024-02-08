@@ -1,0 +1,121 @@
+#sobre {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        .img {
+            display: grid;
+            place-items: center;
+            position: relative;
+            img {
+                width: 60%;
+                border: 1px solid $color2;
+                border-radius: 9px;
+                background: $color1;
+                z-index: 1;
+            }
+            &::after {
+                content: ("");
+                position: absolute;
+                display: block;
+                width: 120px;
+                height: 120px;
+                background-color: transparent;
+                border: 1px solid $color2;
+                border-radius: 9px;
+                bottom: -10%;
+                right: 10%;
+                z-index: 0;
+                opacity: 0.8;
+            }
+        }
+        .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5rem 0;
+            .title {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 0.3rem 0;
+                h2 {
+                    font-weight: 500;
+                    color: transparent;
+                    background-image: linear-gradient(90deg, #02025325, #fff, #02025325);
+                    background-repeat: no-repeat;
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                }
+                p {
+                    font-size: 18px;
+                }
+            }
+            p {
+                width: 80%;
+                color: $color2;
+                line-height: 1.3rem;
+            }
+            .btn {
+                width: 80%;
+            }
+        }
+    }
+    .btn-flut {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        right: -5%;
+        bottom: -5%;
+        opacity: 0;
+        z-index: 9;
+        transition: all 0.5s ease;
+        &[data-active="true"] {
+            right: 5%;
+            bottom: 5%;
+            opacity: 1;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 800px) {
+    #sobre {
+        .container {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 4rem 0;
+            .img {
+                img {
+                    width: 80%;
+                }
+                &::after {
+                    right: 0%;
+                }
+            }
+            .text {
+                align-items: center;
+                text-align: center;
+                .title {
+                    width: 100%;
+                    align-items: center;
+                    text-align: center;
+                    h2 {
+                        background-image: linear-gradient(90deg, #02025325, #02025325, #fff, #02025325, #02025325);
+                    }
+                }
+                p {
+                    width: 100%;
+                    font-size: 16px;
+                }
+            }
+        }
+        .btn-flut {
+            display: none;
+        }
+    }
+}

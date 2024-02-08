@@ -1,0 +1,65 @@
+#insta {
+    position: relative;
+    // padding: 8% 0;
+    .container {
+        display: grid;
+        place-items: center;
+        gap: 3rem 0;
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 0.5rem 0;
+            h2 {
+                font-weight: 500;
+                color: transparent;
+                background-image: linear-gradient(90deg, #fff, #fff, #02025325, #fff, #02025325, #fff, #fff);
+                background-repeat: no-repeat;
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+            p {
+                color: $color2;
+            }
+        }
+        .cont {
+            width: 100%;
+            display: grid;
+            place-items: center;
+            figure {
+                width: 100%;
+                .behold-grid-posts {
+                    max-width: 80% !important;
+                    a {
+                        filter: grayscale(1);
+                        transition: all 0.5s ease;
+                        &:hover {
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 64rem) {
+    #insta {
+        .container {
+            .text {
+                h2 {
+                    background-image: linear-gradient(90deg, #02025325, #fff, #02025325);
+                }
+            }
+            .cont {
+                figure {
+                    .behold-grid-posts {
+                        max-width: 100% !important;
+                        grid-template-columns: repeat(2, 1fr) !important;
+                    }
+                }
+            }
+        }
+    }
+}

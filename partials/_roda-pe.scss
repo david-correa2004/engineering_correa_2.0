@@ -1,0 +1,62 @@
+footer {
+  background: $color1;
+  padding: 5% 0 2%;
+  display: flex;
+  justify-content: center;
+  .logo {
+    display: grid;
+    place-items: center;
+    svg {
+      width: 100px;
+      @import url("https://fonts.cdnfonts.com/css/matura-mt-script-capitals");
+
+      .cls-1 {
+        font-size: 35.71px;
+      }
+
+      .cls-1,
+      .cls-2,
+      .cls-3 {
+        fill: #fff;
+      }
+
+      .cls-1,
+      .cls-3 {
+        font-family: "Matura MT Script Capitals", sans-serif;
+      }
+
+      .cls-4 {
+        letter-spacing: 0.01em;
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-3 {
+        font-size: 24.04px;
+      }
+
+      .cls-5 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-6 {
+        letter-spacing: -0.02em;
+      }
+
+      .cls-7 {
+        letter-spacing: -0.01em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0em;
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  footer {
+    padding: 5% 0;
+  }
+}

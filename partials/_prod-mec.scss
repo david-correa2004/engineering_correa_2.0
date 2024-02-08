@@ -1,0 +1,136 @@
+#prod-mec {
+    overflow-x: hidden;
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+        .text {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 1rem 0;
+            h2 {
+                font-weight: 500;
+                color: transparent;
+                background-image: linear-gradient(90deg, #fff, #fff, #02025325, #fff, #02025325, #fff, #fff);
+                background-repeat: no-repeat;
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+            p {
+                width: 70%;
+                color: $color2;
+                font-size: 18px;
+            }
+            .seta {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                gap: 0 1rem;
+                padding: 2% 0 0;
+                img {
+                    width: 25px;
+                    cursor: pointer;
+                }
+                .swiper-button-prev2 {
+                    transform: rotateZ(180deg);
+                }
+            }
+        }
+        .seta-mob {
+            width: 100%;
+            display: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 0 1rem;
+            img {
+                width: 45px;
+                cursor: pointer;
+            }
+            .swiper-button-prev2 {
+                transform: rotateZ(180deg);
+            }
+        }
+        #car {
+            width: 40vw;
+            .swiper {
+                width: 100%;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        display: grid;
+                        place-items: center;
+                        padding: 5% 0;
+                        .card {
+                            padding: 5% 0;
+                            width: 80%;
+                            display: grid;
+                            place-items: center;
+                            border-top: 1px solid $color2;
+                            border-left: 1px solid $color2;
+                            border-radius: 9px;
+                            background: $color3;
+                            gap: 1rem 0;
+                            cursor: pointer;
+                            img {
+                                width: 80%;
+                            }
+                            .cont {
+                                width: 80%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                gap: 0.5rem 0;
+                                h3 {
+                                    color: $color2;
+                                    font-size: 17px;
+                                    font-weight: 500;
+                                }
+                                p {
+                                    width: 90%;
+                                    font-size: 13px;
+                                    color: $color2;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    #prod-mec {
+        .container {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 2rem 0;
+            .text {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                h2 {
+                    background-image: linear-gradient(90deg, #02025325, #fff, #02025325);
+                }
+                p {
+                    width: 100%;
+                }
+                .seta {
+                    display: none;
+                }
+            }
+            #car {
+                width: 80vw;
+            }
+            .seta-mob {
+                display: flex;
+            }
+        }
+    }
+}

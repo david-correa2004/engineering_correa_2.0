@@ -1,0 +1,119 @@
+#prod {
+    overflow-x: hidden;
+    .container {
+        display: grid;
+        place-items: center;
+        // gap: 2rem 0;
+        .text {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 0.8rem 0;
+            h2 {
+                font-weight: 500;
+                color: transparent;
+                background-image: linear-gradient(90deg, #fff, #fff, #02025325, #fff, #02025325, #fff, #fff);
+                background-repeat: no-repeat;
+                -webkit-background-clip: text;
+                background-clip: text;
+            }
+            p {
+                color: $color2;
+                font-size: 18px;
+            }
+        }
+        .seta,
+        .seta-mob {
+            width: 95%;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: 0 1rem;
+            img {
+                width: 25px;
+                cursor: pointer;
+            }
+            .swiper-button-prev1 {
+                transform: rotateZ(180deg);
+            }
+        }
+        .seta-mob {
+            display: none;
+            justify-content: center;
+            img {
+                width: 45px;
+            }
+        }
+        #car {
+            width: 80vw;
+            .swiper {
+                width: 100%;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        display: grid;
+                        place-items: center;
+                        padding: 5% 0;
+                        .card {
+                            padding: 5% 0;
+                            width: 80%;
+                            display: grid;
+                            place-items: center;
+                            border-top: 1px solid $color2;
+                            border-left: 1px solid $color2;
+                            border-radius: 9px;
+                            background: $color3;
+                            gap: 1rem 0;
+                            cursor: pointer;
+                            img {
+                                width: 80%;
+                            }
+                            .cont {
+                                width: 80%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                text-align: center;
+                                gap: 0.5rem 0;
+                                h3 {
+                                    color: $color2;
+                                    font-size: 17px;
+                                    font-weight: 500;
+                                }
+                                p {
+                                    width: 90%;
+                                    font-size: 13px;
+                                    color: $color2;
+                                    font-weight: 300;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    #prod {
+        .container {
+            gap: 2rem 0;
+            .text {
+                width: 100%;
+                h2 {
+                    background-image: linear-gradient(90deg, #02025325, #fff, #02025325);
+                }
+            }
+            .seta {
+                display: none;
+            }
+            .seta-mob {
+                display: flex;
+            }
+        }
+    }
+}
